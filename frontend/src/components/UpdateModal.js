@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useAppointmentsContext } from "../hooks/useAppointmentsContext";
 import { useAuthContext } from "../hooks/useAuthContext";
 import AppointmentForm from "./AppointmentForm";
@@ -15,14 +15,22 @@ const UpdateModal = ({ appointment }) => {
                 type="button"
                 onClick={() => setShowModal(true)}
             >
-                Cambiar Cita
+                Change Appointment
             </button>
-            {showModal && (
-                <div className="modal" tabIndex="-1" role="dialog">
+            {showModal ? (
+                <div
+                    className="modal fade show"
+                    id="updateModal"
+                    tabIndex="-1"
+                    role="dialog"
+                    aria-labelledby="updateModalLabel"
+                    aria-hidden="true"
+                    style={{ display: "block", backgroundColor: "rgba(0, 0, 0, 0.5)" }}
+                >
                     <div className="modal-dialog" role="document">
                         <div className="modal-content">
                             <div className="modal-header">
-                                <h5 className="modal-title">Actualizar Cita</h5>
+                                <h5 className="modal-title" id="updateModalLabel">Update Appointment</h5>
                                 <button
                                     type="button"
                                     className="close"
@@ -42,13 +50,13 @@ const UpdateModal = ({ appointment }) => {
                                     className="btn btn-danger"
                                     onClick={() => setShowModal(false)}
                                 >
-                                    Cerrar
+                                    Close
                                 </button>
                             </div>
                         </div>
                     </div>
                 </div>
-            )}
+            ) : null}
         </>
     );
 };
