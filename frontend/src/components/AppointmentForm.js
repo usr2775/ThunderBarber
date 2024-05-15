@@ -138,10 +138,10 @@ const AppointmentForm = ({ appointment }) => {
           className="form-control"
         >
           <option value="">Select Barber</option>
-          <option value="Raz">Alexi</option>
-          <option value="Tav">Santiago</option>
-          <option value="Ali">Adrian</option>
-          <option value="Negassi">Garrido</option>
+          <option value="Alexi">Alexi</option>
+          <option value="Santiago">Santiago</option>
+          <option value="Adrian">Adrian</option>
+          <option value="Garrido">Garrido</option>
         </select>
       </div>
 
