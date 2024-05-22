@@ -1,4 +1,4 @@
-const mongoose= require('mongoose')
+const mongoose = require('mongoose')
 
 const Schema = mongoose.Schema
 
@@ -7,11 +7,11 @@ const appointmentSchema = new Schema({
         type: String,
         required: true
     },
-    date:{
+    date: {
         type: Date,
         require: true
     },
-    barber:{
+    barber: {
         type: String,
         require: true
     },
@@ -20,6 +20,6 @@ const appointmentSchema = new Schema({
         require: true
     }
 
-}, { timestamps: true})
+}, { timestamps: true })
 
 module.exports = mongoose.model('Appointment', appointmentSchema)

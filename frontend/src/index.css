@@ -1,5 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&family=VT323&display=swap');
 
+.navbar-logo {
+  height: 40px;
+  width: auto;
+}
+
+
+.container-fluid {
+  margin-left: 10px;
+}
+
+.me-3 {
+  margin-right: 15px;
+}
 
 body {
   font-family: "Poppins", sans-serif;
@@ -12,31 +25,10 @@ body {
   color: #000000;
 }
 
-.time-date {
-  display: flex
+.calendar-container {
+  margin-left: 50px;
 }
 
-input {
-  padding: 10px;
-  margin-top: 10px;
-  margin-bottom: 20px;
-  width: 100%;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  box-sizing: border-box;
+.text-black{
+  color: #000000;
 }
-
-div.error {
-  padding: 10px;
-  background: #ffefef;
-  border: 1px solid #e7195a;
-  color: var(--error);
-  border-radius: 4px;
-  margin: 20px 0;
-}
-
-input.error {
-  border: 1px solid #e7195a;
-}
-
-

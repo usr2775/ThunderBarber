@@ -1,22 +1,24 @@
 import React from "react";
-import { useAppointmentsContext } from "../hooks/useAppointmentsContext";
-import { useAuthContext } from "../hooks/useAuthContext";
 import AppointmentForm from "./AppointmentForm";
 
+// Defining the UpdateModal component
 const UpdateModal = ({ appointment }) => {
+    // State to control the visibility of the modal
     const [showModal, setShowModal] = React.useState(false);
-    const { dispatch } = useAppointmentsContext();
-    const { user } = useAuthContext();
+    // Accessing appointment context and authentication context using custom hooks
 
+    // Rendering the UpdateModal component with conditional rendering for modal visibility
     return (
         <>
+            {/* Button to trigger the modal */}
             <button
                 className="btn btn-success"
                 type="button"
                 onClick={() => setShowModal(true)}
             >
-                Change Appointment
+                Actualizar Cita
             </button>
+            {/* Modal content */}
             {showModal ? (
                 <div
                     className="modal fade show"
@@ -30,7 +32,7 @@ const UpdateModal = ({ appointment }) => {
                     <div className="modal-dialog" role="document">
                         <div className="modal-content">
                             <div className="modal-header">
-                                <h5 className="modal-title" id="updateModalLabel">Update Appointment</h5>
+                                <h5 className="modal-title" id="updateModalLabel">Actualizar Cita</h5>
                                 <button
                                     type="button"
                                     className="close"
@@ -42,15 +44,17 @@ const UpdateModal = ({ appointment }) => {
                                 </button>
                             </div>
                             <div className="modal-body">
+                                {/* Render the AppointmentForm component */}
                                 <AppointmentForm appointment={appointment} />
                             </div>
                             <div className="modal-footer">
+                                {/* Button to close the modal */}
                                 <button
                                     type="button"
                                     className="btn btn-danger"
                                     onClick={() => setShowModal(false)}
                                 >
-                                    Close
+                                    Cerrar
                                 </button>
                             </div>
                         </div>
@@ -61,4 +65,5 @@ const UpdateModal = ({ appointment }) => {
     );
 };
 
+// Exporting the UpdateModal component as default
 export default UpdateModal;

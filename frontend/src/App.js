@@ -6,8 +6,15 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Navbar from './components/Navbar';
+import HairCare from "./pages/HairCare";
+import HairStyle from "./pages/HairStyles";
+import CalendarPage from "./pages/CalendarPage"
+
+
 
 function App() {
+  // Access user data from the authentication context
+
   const { user } = useAuthContext()
   return (
     <div className="App">
@@ -27,6 +34,9 @@ function App() {
               path="/signup"
               element={!user ? <Signup /> : <Navigate to="/" />}
             />
+            <Route path="/CalendarPage" element={<CalendarPage />} />
+            <Route path="/haircare" element={<HairCare />} />
+            <Route path="/hairstyles" element={<HairStyle />} />
           </Routes>
         </div>
       </BrowserRouter>
