@@ -1,11 +1,12 @@
 const jwt = require('jsonwebtoken')
-const User = require('../models/userModel')
+const User = require('../models/UserModel')
 
 const requireAuth = async (req, res, next) => {
+  // verify user is authenticated
   const { authorization } = req.headers
 
   if (!authorization) {
-    return res.status(401).json({ error: 'Se requiere token de autorización' })
+    return res.status(401).json({error: 'Authorization token required'})
   }
 
   const token = authorization.split(' ')[1]
@@ -18,7 +19,7 @@ const requireAuth = async (req, res, next) => {
 
   } catch (error) {
     console.log(error)
-    res.status(401).json({ error: 'La solicitud no está autorizada' })
+    res.status(401).json({error: 'Request is not authorized'})
   }
 }
 
