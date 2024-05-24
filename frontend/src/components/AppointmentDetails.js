@@ -64,7 +64,7 @@ const AppointmentDetails = ({ appointment }) => {
         className="btn btn-danger mr-2 absolute top-16 right-5 px-4 py-6 rounded shadow hover:bg-red-700"
         onClick={handleClick}
       >
-        {CheckIfPast(dateTime) ? "Delete" : "Cancel"}
+        {CheckIfPast(dateTime) ? "Delete" : "Cancelar"}
       </span>
       {/* Render the UpdateModal component */}
       <UpdateModal appointment={appointment} />

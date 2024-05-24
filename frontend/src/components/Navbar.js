@@ -79,7 +79,7 @@ const Navbar = () => {
                                     to="/login"
                                     onClick={() => setActiveButton("login")}
                                 >
-                                    Login
+                                    Acceso
                                 </Link>
                             </li>
                             <li className="nav-item me-3">
@@ -91,7 +91,7 @@ const Navbar = () => {
                                     to="/signup"
                                     onClick={() => setActiveButton("signup")}
                                 >
-                                    Sign Up
+                                    Registro
                                 </Link>
                             </li>
                         </ul>

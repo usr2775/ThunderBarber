@@ -47,7 +47,7 @@ const Login = () => {
                                     disabled={isLoading}
                                 >
                                     {/* Button text changes based on loading state */}
-                                    {isLoading ? 'Logging in...' : 'Login'}
+                                    {isLoading ? 'Accediendo...' : 'Acceso'}
                                 </button>
                             </form>
                             {/* Display error message if login fails */}

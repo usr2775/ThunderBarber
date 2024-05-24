@@ -67,7 +67,7 @@ const Signup = () => {
                                     disabled={isLoading}
                                 >
                                     {/* Button text changes based on loading state */}
-                                    {isLoading ? 'Signing up...' : 'Sign Up'}
+                                    {isLoading ? 'Registrarse...' : 'Registro'}
                                 </button>
                             </form>
                             {/* Display error message if signup fails */}
